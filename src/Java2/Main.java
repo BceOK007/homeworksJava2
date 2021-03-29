@@ -34,8 +34,8 @@ public class Main {
         System.arraycopy(arr, 0, arr1, 0, h);
         System.arraycopy(arr, h, arr2, 0, h);
 
-        Thread thread1 = new Thread(new CalcExpression(arr1));
-        Thread thread2 = new Thread(new CalcExpression(arr2));
+        Thread thread1 = new Thread(new CalcExpression(arr1, 0));
+        Thread thread2 = new Thread(new CalcExpression(arr2, h));
 
         thread1.start();
         thread2.start();
